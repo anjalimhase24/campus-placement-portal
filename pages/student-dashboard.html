@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard – CampusHire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/student-dashboard.css" />
+<link rel="stylesheet" href="../js/student-dashboard.js"/>
+</head>
+<body>
+    <main class="main">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="greeting">
+      <h1 id="greetingName">Welcome 👋</h1>
+      <p id="greetingSub">Edit your profile to personalise your dashboard.</p>
+    </div>
+    <div class="topbar-right">
+      <button class="edit-profile-btn" onclick="openModal()">✏️ Edit My Profile</button>
+      <div class="icon-btn">🔔<span class="notif-dot"></span></div>
+    </div>
+  </div>
+
+  <!-- Stat Cards -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-icon-wrap" style="background:var(--blue-s)">💼</div>
+      <div class="stat-val" style="color:var(--blue)" id="statApps">0</div>
+      <div class="stat-label">Applications</div>
+      <div class="stat-sub" style="background:var(--blue-s);color:var(--blue)" id="statAppsub">Add applications</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon-wrap" style="background:var(--violet-s)">🎯</div>
+      <div class="stat-val" style="color:var(--violet)" id="statInterviews">0</div>
+      <div class="stat-label">Interviews</div>
+      <div class="stat-sub" style="background:var(--violet-s);color:var(--violet)" id="statInterviewsub">Scheduled</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon-wrap" style="background:var(--teal-s)">📈</div>
+      <div class="stat-val" style="color:var(--teal)" id="statCgpa">—</div>
+      <div class="stat-label">Current CGPA</div>
+      <div class="stat-sub" style="background:var(--teal-s);color:var(--teal)" id="statCgpasub">Enter CGPA</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon-wrap" style="background:var(--green-s)">🎉</div>
+      <div class="stat-val" style="color:var(--green)" id="statOffers">0</div>
+      <div class="stat-label">Offers Received</div>
+      <div class="stat-sub" style="background:var(--green-s);color:var(--green)" id="statOffersub">Keep applying!</div>
+    </div>
+  </div>
+
+</body>
+</html>

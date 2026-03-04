@@ -1,0 +1,318 @@
+
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+:root {
+    --bg: #f0f4ff;
+    --bg2: #e8eef8;
+    --white: #fff;
+    --border: #e2e8f7;
+    --border2: #d0d8f0;
+    --ink: #0f1a35;
+    --ink2: #3a4a72;
+    --muted: #8892b0;
+    --muted2: #b0bcd8;
+    --blue: #2563eb;
+    --blue-s: #dbeafe;
+    --teal: #0d9488;
+    --teal-s: #ccfbf1;
+    --coral: #f43f5e;
+    --coral-s: #ffe4e6;
+    --amber: #f59e0b;
+    --amber-s: #fef3c7;
+    --green: #10b981;
+    --green-s: #d1fae5;
+    --violet: #7c3aed;
+    --violet-s: #ede9fe;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden
+}
+
+::-webkit-scrollbar {
+    width: 5px
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg2)
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 10px
+}
+
+/* ── NAVBAR ── */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-center {
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+    color: #fff;
+    background: rgba(37, 99, 235, 0.2);
+    border-bottom: 2px solid var(--blue);
+}
+
+.logo {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.user-name {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.logo-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--coral);
+    box-shadow: 0 0 8px var(--coral);
+    flex-shrink: 0
+}
+
+.online-pip {
+    width: 7px;
+    height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    margin-left: auto;
+    box-shadow: 0 0 5px var(--green)
+}
+
+/* ── MAIN ── */
+.main {
+    margin-top: 70px;
+    min-height: 100vh;
+    padding: 2rem
+}
+
+/* ── TOPBAR ── */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.8rem
+}
+
+.greeting h1 {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em
+}
+
+.greeting p {
+    color: var(--muted);
+    font-size: 0.86rem;
+    margin-top: 0.2rem
+}
+
+.topbar-right {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center
+}
+
+.edit-profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    padding: 0.55rem 1.2rem;
+    border-radius: 10px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    transition: all 0.2s;
+}
+
+.edit-profile-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px)
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+    position: relative
+}
+
+.icon-btn:hover {
+    border-color: var(--blue)
+}
+
+.notif-dot {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 7px;
+    height: 7px;
+    background: var(--coral);
+    border-radius: 50%;
+    border: 2px solid var(--white)
+}
+
+/* ── STAT CARDS ── */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.4rem
+}
+
+.stat-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    padding: 1.3rem 1.4rem;
+    transition: transform 0.25s, box-shadow 0.25s;
+    animation: fadeUp 0.5s ease both;
+    cursor: default
+}
+
+.stat-card:nth-child(1) {
+    animation-delay: 0.05s
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: 0.1s
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: 0.15s
+}
+
+.stat-card:nth-child(4) {
+    animation-delay: 0.2s
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(15, 26, 53, 0.08)
+}
+
+.stat-icon-wrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 0.9rem
+}
+
+.stat-val {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    font-size: 1.9rem;
+    letter-spacing: -0.03em;
+    line-height: 1
+}
+
+.stat-label {
+    font-size: 0.77rem;
+    color: var(--muted);
+    margin-top: 0.3rem
+}
+
+.stat-sub {
+    font-size: 0.71rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 100px;
+    display: inline-block
+}
