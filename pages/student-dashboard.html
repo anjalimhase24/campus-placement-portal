@@ -142,5 +142,36 @@
         </div>
       </div>
     </div>
+    <div class="card">
+      <div class="card-head"><div class="card-title">Academic Overview</div></div>
+      <div class="cgpa-sec">
+        <div class="ring-wrap">
+          <svg width="86" height="86" viewBox="0 0 86 86">
+            <circle cx="43" cy="43" r="35" fill="none" stroke="var(--bg2)" stroke-width="7"/>
+            <circle cx="43" cy="43" r="35" fill="none" stroke="url(#grd)" stroke-width="7"
+              stroke-dasharray="219.91" id="cgpaRing" stroke-dashoffset="219.91" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="grd" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#2563eb"/>
+                <stop offset="100%" stop-color="#0d9488"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="ring-center">
+            <div class="ring-val" id="ringVal">—</div>
+            <div class="ring-lbl">CGPA</div>
+          </div>
+        </div>
+        <div class="cgpa-rows">
+          <div class="c-row"><span>10th %</span><span id="ac10th" style="color:var(--green)">—</span></div>
+          <div class="c-row"><span>12th %</span><span id="ac12th" style="color:var(--green)">—</span></div>
+          <div class="c-row"><span>CGPA</span><span id="acCgpa" style="color:var(--blue)">—</span></div>
+          <div class="c-row"><span>Backlogs</span><span id="acBacklog" style="color:var(--green)">—</span></div>
+          <div class="c-row"><span>Branch</span><span id="acBranch" style="color:var(--amber)">—</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
