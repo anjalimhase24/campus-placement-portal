@@ -60,6 +60,22 @@ body {
   margin-bottom: 2rem;
 }
 
+/* PROGRESS BAR */
+.progress-bar-wrap {
+  height: 3px;
+  background: var(--border);
+  border-radius: 100px;
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 100px;
+  transition: width 0.4s ease;
+  width: 33%;
+}
+
 /* FORM STYLES */
 .form-grid {
   display: grid;
