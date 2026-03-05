@@ -581,3 +581,37 @@ body {
     background: var(--amber-s);
     color: var(--amber)
 }
+.skill-row {
+    margin-bottom: 0.85rem
+}
+
+.skill-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.79rem;
+    margin-bottom: 0.38rem
+}
+
+.skill-head span:first-child {
+    font-weight: 500;
+    color: var(--ink2)
+}
+
+.skill-head span:last-child {
+    color: var(--muted);
+    font-size: 0.71rem;
+    font-weight: 600
+}
+
+.skill-bar {
+    height: 7px;
+    background: var(--bg2);
+    border-radius: 100px;
+    overflow: hidden
+}
+
+.skill-fill {
+    height: 100%;
+    border-radius: 100px;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1)
+}
