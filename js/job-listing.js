@@ -1,0 +1,3 @@
+{ title: 'Software Engineer', company: 'TCS', icon: '💻', ctc: '₹3.6 LPA', tags: ['Java', 'SQL', 'DSA'], type: 'IT', badge: 'new' },
+  { title: 'Associate Developer', company: 'Infosys', icon: '🌐', ctc: '₹4.5 LPA', tags: ['Python', 'REST API'], type: 'IT', badge: 'hot' },
+  { title: 'Data Analyst', company: 'Cognizant', icon: '📊', ctc: '₹5.2 LPA', tags: ['Excel', 'Python', 'BI'], type: 'IT', badge: '' },
