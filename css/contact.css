@@ -205,31 +205,6 @@ body {
   padding: 0
 }
 
-:root {
-  --bg: #F5F0E8;
-  --bg2: #EDE7D9;
-  --white: #FFFDF8;
-  --border: #DDD3C2;
-  --border2: #C8BB9F;
-  --ink: #1A1208;
-  --ink2: #3D2E18;
-  --muted: #7A6A52;
-  --muted2: #B0A08A;
-  --orange: #E8650A;
-  --orange-deep: #C4500A;
-  --orange-s: #FDF0E6;
-  --amber: #F0A830;
-  --amber-s: #FEF6E0;
-  --green: #2D7A4F;
-  --green-s: #E6F5ED;
-  --teal: #0A8A7A;
-  --teal-s: #E0F5F2;
-  --violet: #6D3AC7;
-  --violet-s: #EDE8FA;
-  --coral: #D63B3B;
-  --coral-s: #FDEAEA;
-}
-
 html {
   scroll-behavior: smooth
 }
