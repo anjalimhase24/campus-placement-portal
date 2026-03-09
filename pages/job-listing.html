@@ -1,883 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CampusHire – Live Jobs</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
-    rel="stylesheet">
-  <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --ink: #0a0a12;
-      --paper: #f5f3ee;
-      --accent: #ff4d00;
-      --gold: #e8c84a;
-      --muted: #7a7870;
-      --border: #e0ddd5;
-      --success: #1a7a3c;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-    }
-
-    /* ─── NAV ─── */
-    *,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0
-}
-
-:root {
-    /* Cream */
-    --cream: #F5F0E8;
-    --cream2: #EDE7D9;
-    --cream3: #E2D9C8;
-    --white: #FFFDF8;
-    /* Black */
-    --ink: #1A1208;
-    --ink2: #3D2E18;
-    --muted: #7A6A52;
-    --muted2: #B0A08A;
-    /* Orange */
-    --orange: #E8650A;
-    --orange-deep: #C4500A;
-    --orange-s: #FDF0E6;
-    --orange-mid: #F28A3C;
-    --amber: #F0A830;
-    --amber-s: #FEF6E0;
-    /* Status colors */
-    --green: #2D7A4F;
-    --green-s: #E6F5ED;
-    --violet: #6D3AC7;
-    --violet-s: #EDE8FA;
-    --coral: #D63B3B;
-    --coral-s: #FDEAEA;
-    --border: #DDD3C2;
-    --border2: #C8BB9F;
-}
-
-html {
-    scroll-behavior: smooth
-}
-
-body {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    min-height: 100vh;
-    overflow-x: hidden
-}
-
-::-webkit-scrollbar {
-    width: 5px
-}
-
-::-webkit-scrollbar-track {
-    background: var(--cream2)
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--orange);
-    border-radius: 10px
-}
-
-/* ══════ NAVBAR ══════ */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 64px;
-    background: rgba(255, 253, 248, 0.96);
-    backdrop-filter: blur(18px);
-    border-bottom: 1.5px solid var(--border);
-    z-index: 300;
-    display: flex;
-    align-items: center;
-    padding: 0 2.5rem;
-    gap: 1.5rem
-}
-
-.nav-logo {
-    font-family: 'Clash Display', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--ink);
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    cursor: pointer;
-    margin-right: auto;
-    text-decoration: none
-}
-
-.nav-logo-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--orange);
-    box-shadow: 0 0 8px var(--orange)
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 0.1rem
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--ink2);
-    padding: 0.42rem 0.8rem;
-    border-radius: 8px;
-    transition: all 0.2s;
-    cursor: pointer
-}
-
-.nav-links a:hover {
-    background: var(--orange-s);
-    color: var(--orange)
-}
-
-.nav-links a.active {
-    background: var(--orange-s);
-    color: var(--orange);
-    font-weight: 600
-}
-
-.nav-cta {
-    display: flex;
-    gap: 0.5rem;
-    margin-left: 0.8rem
-}
-
-/* ══════ BUTTONS ══════ */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    font-size: 0.83rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
-    border: none;
-    font-family: 'Bricolage Grotesque', sans-serif
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1.5px solid var(--border2);
-    color: var(--ink2)
-}
-
-.btn-outline:hover {
-    border-color: var(--orange);
-    color: var(--orange)
-}
-
-.btn-primary {
-    background: var(--orange);
-    color: #fff;
-    box-shadow: 0 3px 12px rgba(232, 101, 10, 0.28)
-}
-
-.btn-primary:hover {
-    background: var(--orange-deep);
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(232, 101, 10, 0.38)
-}
-
-.btn-dark {
-    background: var(--ink);
-    color: #fff
-}
-
-.btn-dark:hover {
-    background: var(--ink2);
-    transform: translateY(-1px)
-}
-
-.btn-lg {
-    padding: 0.72rem 1.7rem;
-    font-size: 0.93rem;
-    border-radius: 12px
-}
-
-.btn-sm {
-    padding: 0.32rem 0.75rem;
-    font-size: 0.76rem;
-    border-radius: 7px
-}
-
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0
-}
-
-
-html {
-    scroll-behavior: smooth
-}
-
-body {
-    font-family: 'Bricolage Grotesque', sans-serif;
-    background: var(--paper);
-    color: var(--ink);
-    min-height: 100vh;
-    overflow-x: hidden
-}
-
-::-webkit-scrollbar {
-    width: 5px
-}
-
-::-webkit-scrollbar-track {
-    background: var(--border)
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--accent);
-    border-radius: 10px
-}
-
-
-    /* ─── JOBS HERO ─── */
-    .jobs-hero {
-      background: var(--ink);
-      padding: 7rem 4rem 3.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .jobs-hero::before {
-      content: '';
-      position: absolute;
-      top: -30%;
-      right: -5%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(255, 77, 0, 0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .jobs-hero::after {
-      content: 'JOBS';
-      position: absolute;
-      right: 2rem;
-      bottom: 0;
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 16vw;
-      color: rgba(255, 255, 255, 0.025);
-      line-height: 1;
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-    }
-
-    .badge-pill {
-      display: inline-block;
-      background: rgba(232, 200, 74, 0.12);
-      color: var(--gold);
-      border: 1px solid rgba(232, 200, 74, 0.3);
-      padding: 0.28rem 0.85rem;
-      border-radius: 100px;
-      font-size: 0.74rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 1.2rem;
-      animation: fadeUp 0.6s ease both;
-    }
-
-    .jobs-hero h1 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
-      color: #fff;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.6rem;
-      animation: fadeUp 0.6s 0.1s ease both;
-    }
-
-    .jobs-hero h1 em {
-      color: var(--accent);
-      font-style: normal;
-    }
-
-    .jobs-hero p {
-      color: #888;
-      font-size: 0.95rem;
-      animation: fadeUp 0.6s 0.15s ease both;
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 2.5rem;
-      padding-top: 1.8rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.07);
-      animation: fadeUp 0.6s 0.2s ease both;
-    }
-
-    .stat-num {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.7rem;
-      color: #fff;
-    }
-
-    .stat-num span {
-      color: var(--accent);
-    }
-
-    .stat-lbl {
-      font-size: 0.75rem;
-      color: #555;
-      margin-top: 0.1rem;
-    }
-
-    /* ─── FILTERS ─── */
-    .jobs-filters {
-      background: #fff;
-      padding: 1.25rem 4rem;
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 72px;
-      z-index: 100;
-    }
-
-    .filter-input {
-      flex: 1;
-      min-width: 200px;
-      padding: 0.6rem 1rem;
-      border: 1.5px solid var(--border);
-      border-radius: 7px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.88rem;
-      outline: none;
-      transition: border-color 0.2s;
-      color: var(--ink);
-    }
-
-    .filter-input:focus {
-      border-color: var(--accent);
-    }
-
-    .filter-btn {
-      padding: 0.6rem 1.3rem;
-      border-radius: 7px;
-      border: 1.5px solid var(--border);
-      background: #fff;
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'DM Sans', sans-serif;
-      color: var(--ink);
-    }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
-    }
-
-    /* ─── RESULTS BAR ─── */
-    .results-bar {
-      padding: 1.2rem 4rem 0;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    .results-bar span {
-      font-weight: 700;
-      color: var(--ink);
-    }
-
-    /* ─── JOBS LIST ─── */
-    .jobs-list {
-      padding: 1.5rem 4rem 4rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    /* ─── JOB CARD ─── */
-    .job-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.6rem;
-      cursor: pointer;
-      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-      position: relative;
-      overflow: hidden;
-      animation: cardIn 0.4s ease both;
-    }
-
-    .job-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--accent);
-      opacity: 0;
-      transition: opacity 0.25s;
-    }
-
-    .job-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      border-color: rgba(255, 77, 0, 0.2);
-    }
-
-    .job-card:hover::before {
-      opacity: 1;
-    }
-
-    .job-card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-    }
-
-    .company-logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: var(--paper);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
-
-    .job-badges {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.3rem;
-    }
-
-    .job-badge {
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 0.2rem 0.7rem;
-      border-radius: 100px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .job-badge.new {
-      background: #fff3cd;
-      color: #92600a;
-    }
-
-    .job-badge.hot {
-      background: #fde8e8;
-      color: #9b1c1c;
-    }
-
-    .job-badge.it {
-      background: #e8f0fe;
-      color: #1a56db;
-    }
-
-    .job-badge.finance {
-      background: #e6f5ec;
-      color: var(--success);
-    }
-
-    .job-badge.core {
-      background: #f3f0ff;
-      color: #5b21b6;
-    }
-
-    .job-title {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .job-company {
-      color: var(--muted);
-      font-size: 0.83rem;
-      margin-bottom: 1rem;
-    }
-
-    .job-tags {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.9rem;
-    }
-
-    .job-tag {
-      background: var(--paper);
-      border: 1px solid var(--border);
-      padding: 0.25rem 0.7rem;
-      border-radius: 5px;
-      font-size: 0.76rem;
-      color: #555;
-    }
-
-    .skill-tags {
-      display: flex;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-    }
-
-    .skill-tag {
-      background: rgba(255, 77, 0, 0.06);
-      border: 1px solid rgba(255, 77, 0, 0.15);
-      color: var(--accent);
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.73rem;
-      font-weight: 500;
-    }
-
-    .job-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 0.9rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .job-ctc {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--success);
-    }
-
-    .job-deadline {
-      font-size: 0.74rem;
-      color: var(--muted);
-      margin-top: 0.15rem;
-    }
-
-    .job-deadline.urgent {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .btn-apply {
-      background: var(--ink);
-      color: #fff;
-      padding: 0.45rem 1.1rem;
-      border-radius: 5px;
-      border: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-      font-family: 'DM Sans', sans-serif;
-    }
-
-    .btn-apply:hover {
-      background: var(--accent);
-    }
-
-    .btn-apply.applied {
-      background: var(--success);
-      cursor: default;
-    }
-
-    /* ─── TOAST ─── */
-    .toast {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 999;
-      background: var(--ink);
-      color: #fff;
-      padding: 0.9rem 1.5rem;
-      border-radius: 8px;
-      font-size: 0.88rem;
-      font-weight: 500;
-      transform: translateY(80px);
-      opacity: 0;
-      transition: all 0.35s ease;
-      border-left: 4px solid var(--accent);
-    }
-
-    .toast.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    /* ─── ANIMATIONS ─── */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes cardIn {
-      from {
-        opacity: 0;
-        transform: translateY(14px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 900px) {
-      nav {
-        padding: 1rem 1.5rem;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .jobs-hero {
-        padding: 6rem 1.5rem 2.5rem;
-      }
-
-      .jobs-filters,
-      .results-bar,
-      .jobs-list {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
-
-      .jobs-list {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusHire Jobs</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- NAV -->
- <nav class="navbar">
-  <a class="nav-logo" href="#">
-    <span class="nav-logo-dot"></span>CampusHire
-  </a>
-  <div class="nav-links">
-    <a href="../index.html">Home</a>
-    <a href="../pages/job-listing.html">Jobs</a>
-    <a class="active" href="../pages/Application-status.html">Applications</a>
-    <a href="../pages/student-dashboard.html">Dashboard</a>
-    <a href="../pages/about.html">About</a>
-    <a href="../pages/contact.html">Contact</a>
-  </div>
-  <div class="nav-cta">
-    <button class="btn btn-outline"><a href="../pages/login.html">Login</a></button>
-    <button class="btn btn-primary"><a href="../pages/register.html">Register Free</a></button>
-  </div>
-</nav>
-  <!-- FILTERS -->
-  <div class="jobs-filters">
-    <input class="filter-input" placeholder="🔍  Search by role, company or skill…" oninput="filterJobs(this.value)" />
-    <button class="filter-btn active" onclick="filterByType(this,'all')">All</button>
-    <button class="filter-btn" onclick="filterByType(this,'IT')">IT</button>
-    <button class="filter-btn" onclick="filterByType(this,'Finance')">Finance</button>
-    <button class="filter-btn" onclick="filterByType(this,'Core')">Core</button>
-  </div>
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">Campus<span>Hire</span></div>
 
-  <div class="results-bar" id="resultsBar"></div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#" class="active">Jobs</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Login</a>
+    </nav>
 
-  <div class="jobs-list" id="jobsList"></div>
+    <button class="register-btn">Register</button>
+</header>
 
-  <div class="toast" id="toast"></div>
-  <footer class="footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">
-        <span class="footer-brand-dot"></span>CampusHire
-      </div>
-      <p class="footer-desc">India's leading campus placement platform connecting students to top recruiters.</p>
+<!-- Search -->
+<div class="search-section">
+    <input type="text" placeholder="Search by role, company or skill...">
+
+    <div class="filters">
+        <button class="active">All</button>
+        <button>IT</button>
+        <button>Finance</button>
+        <button>Core</button>
     </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Platform</div>
-      <a href="../pages/job-listing.html">Browse Jobs</a>
-      <a href="../pages/Application-status.html">Applications</a>
-      <a href="../pages/student-dashboard.html">Dashboard</a>
-      <a href="../pages/student-registration.html">Register</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Company</div>
-      <a href="../pages/about.html">About Us</a>
-      <a href="../pages/contact.html">Contact</a>
-      <a href="../pages/student-registration.html">register</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Support</div>
-      <a href="https://www.instagram.com/?hl=en">Instagram</a>
-      <a href="https://www.facebook.com/">facebook</a>
-      <a href="https://x.com/">Twitter</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 CampusHire. All rights reserved.</span>
-    <span>Made with ❤️ for Indian students</span>
-  </div>
-</footer>
+</div>
 
-  <script>
-    const JOBS = [
-      { id: 1, role: "Software Engineer", company: "Google", logo: "🅖", type: "IT", location: "Bangalore", ctc: "₹24 LPA", batch: "2025", skills: ["DSA", "System Design", "Python"], deadline: "Mar 15, 2025", urgent: false, isNew: true, isHot: false },
-      { id: 2, role: "Investment Banking Analyst", company: "Goldman Sachs", logo: "📈", type: "Finance", location: "Mumbai", ctc: "₹18 LPA", batch: "2025", skills: ["Financial Modelling", "Excel", "Valuation"], deadline: "Mar 10, 2025", urgent: true, isNew: false, isHot: true },
-      { id: 3, role: "Mechanical Design Engineer", company: "Tata Motors", logo: "⚙️", type: "Core", location: "Pune", ctc: "₹9 LPA", batch: "2025", skills: ["CAD", "SolidWorks", "FEA"], deadline: "Mar 20, 2025", urgent: false, isNew: false, isHot: false },
-      { id: 4, role: "Data Scientist", company: "Microsoft", logo: "🪟", type: "IT", location: "Hyderabad", ctc: "₹22 LPA", batch: "2025", skills: ["ML", "Python", "SQL", "Azure"], deadline: "Mar 18, 2025", urgent: false, isNew: true, isHot: false },
-      { id: 5, role: "Risk Analyst", company: "JP Morgan", logo: "💎", type: "Finance", location: "Mumbai", ctc: "₹14 LPA", batch: "2025", skills: ["Risk Mgmt", "Python", "Statistics"], deadline: "Mar 12, 2025", urgent: true, isNew: false, isHot: true },
-      { id: 6, role: "Frontend Developer", company: "Flipkart", logo: "🛒", type: "IT", location: "Bangalore", ctc: "₹16 LPA", batch: "2025", skills: ["React", "TypeScript", "CSS"], deadline: "Mar 25, 2025", urgent: false, isNew: true, isHot: false },
-      { id: 7, role: "Civil Structural Engineer", company: "L&T Construction", logo: "🏗️", type: "Core", location: "Chennai", ctc: "₹8 LPA", batch: "2025", skills: ["STAAD Pro", "AutoCAD", "Revit"], deadline: "Apr 1, 2025", urgent: false, isNew: false, isHot: false },
-      { id: 8, role: "Quant Analyst", company: "DE Shaw", logo: "📊", type: "Finance", location: "Hyderabad", ctc: "₹28 LPA", batch: "2025", skills: ["Statistics", "C++", "Probability"], deadline: "Mar 9, 2025", urgent: true, isNew: true, isHot: true },
-      { id: 9, role: "DevOps Engineer", company: "Infosys", logo: "🔧", type: "IT", location: "Pune", ctc: "₹10 LPA", batch: "2025", skills: ["Docker", "Kubernetes", "CI/CD"], deadline: "Mar 22, 2025", urgent: false, isNew: false, isHot: false },
-      { id: 10, role: "Business Analyst", company: "Capgemini", logo: "📋", type: "Finance", location: "Mumbai", ctc: "₹8 LPA", batch: "2025", skills: ["Excel", "PowerBI", "SQL"], deadline: "Mar 14, 2025", urgent: true, isNew: true, isHot: false },
-    ];
+<!-- Jobs -->
+<section class="jobs-container">
 
-    const appliedSet = new Set();
-    let currentType = 'all', currentSearch = '';
+<div class="job-card">
+<h3>Software Engineer</h3>
+<p class="company">Google</p>
 
-    function renderJobs() {
-      const list = document.getElementById('jobsList');
-      const resultsBar = document.getElementById('resultsBar');
-      const filtered = JOBS.filter(job => {
-        const matchType = currentType === 'all' || job.type === currentType;
-        const q = currentSearch.toLowerCase();
-        const matchSearch = !q || job.role.toLowerCase().includes(q) || job.company.toLowerCase().includes(q) || job.skills.some(s => s.toLowerCase().includes(q));
-        return matchType && matchSearch;
-      });
+<div class="tags">
+<span>Bangalore</span>
+<span>Batch 2025</span>
+</div>
 
-      list.innerHTML = '';
-      resultsBar.innerHTML = `Showing <span>${filtered.length}</span> of <span>${JOBS.length}</span> openings`;
+<div class="skills">
+<span>DSA</span>
+<span>System Design</span>
+<span>Python</span>
+</div>
 
-      if (filtered.length === 0) {
-        list.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:4rem 2rem;color:var(--muted)"><div style="font-size:3rem;margin-bottom:1rem">🔍</div><h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;margin-bottom:0.5rem;color:var(--ink)">No jobs found</h3><p>Try adjusting your search or filter criteria.</p></div>`;
-        return;
-      }
+<div class="job-footer">
+<h4>₹24 LPA</h4>
+<button>Apply Now</button>
+</div>
+</div>
 
-      filtered.forEach((job, idx) => {
-        const isApplied = appliedSet.has(job.id);
-        const typeBadgeClass = job.type === 'IT' ? 'it' : job.type === 'Finance' ? 'finance' : 'core';
-        const card = document.createElement('div');
-        card.className = 'job-card';
-        card.style.animationDelay = `${idx * 0.05}s`;
-        card.innerHTML = `
-          <div class="job-card-top">
-            <div class="company-logo">${job.logo}</div>
-            <div class="job-badges">
-              ${job.isNew ? '<span class="job-badge new">New</span>' : ''}
-              ${job.isHot ? '<span class="job-badge hot">🔥 Hot</span>' : ''}
-              <span class="job-badge ${typeBadgeClass}">${job.type}</span>
-            </div>
-          </div>
-          <div class="job-title">${job.role}</div>
-          <div class="job-company">${job.company}</div>
-          <div class="job-tags">
-            <span class="job-tag">📍 ${job.location}</span>
-            <span class="job-tag">🎓 Batch ${job.batch}</span>
-          </div>
-          <div class="skill-tags">${job.skills.map(s => `<span class="skill-tag">${s}</span>`).join('')}</div>
-          <div class="job-footer">
-            <div>
-              <div class="job-ctc">${job.ctc}</div>
-              <div class="job-deadline ${job.urgent ? 'urgent' : ''}">🗓 ${job.urgent ? '⚡ Urgent · ' : ''}Closes ${job.deadline}</div>
-            </div>
-            <button class="btn-apply ${isApplied ? 'applied' : ''}" onclick="applyJob(${job.id},event)">${isApplied ? '✓ Applied' : 'Apply Now'}</button>
-          </div>`;
-        list.appendChild(card);
-      });
-    }
 
-    function filterJobs(v) { currentSearch = v; renderJobs(); }
-    function filterByType(btn, type) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active'); currentType = type; renderJobs();
-    }
-    function applyJob(id, e) {
-  e.stopPropagation();
+<div class="job-card">
+<h3>Investment Banking Analyst</h3>
+<p class="company">Goldman Sachs</p>
 
-  if (appliedSet.has(id)) return;
+<div class="tags">
+<span>Mumbai</span>
+<span>Batch 2025</span>
+</div>
 
-  appliedSet.add(id);
+<div class="skills">
+<span>Financial Modelling</span>
+<span>Excel</span>
+<span>Valuation</span>
+</div>
 
-  const job = JOBS.find(j => j.id === id);
+<div class="job-footer">
+<h4>₹18 LPA</h4>
+<button>Apply Now</button>
+</div>
+</div>
 
-  let applications = JSON.parse(localStorage.getItem("applications")) || [];
 
-  let newApplication = {
-    company: job.company,
-    role: job.role,
-    date: new Date().toLocaleDateString(),
-    status: "Applied"
-  };
+<div class="job-card">
+<h3>Mechanical Design Engineer</h3>
+<p class="company">Tata Motors</p>
 
-  applications.push(newApplication);
+<div class="tags">
+<span>Pune</span>
+<span>Batch 2025</span>
+</div>
 
-  localStorage.setItem("applications", JSON.stringify(applications));
+<div class="skills">
+<span>CAD</span>
+<span>SolidWorks</span>
+<span>FEA</span>
+</div>
 
-  e.target.textContent = "✓ Applied";
-  e.target.classList.add("applied");
+<div class="job-footer">
+<h4>₹9 LPA</h4>
+<button>Apply Now</button>
+</div>
+</div>
 
-  showToast(`✅ Applied to ${job.role} at ${job.company}!`);
-}
-    function showToast(msg) {
-      const t = document.getElementById('toast');
-      t.textContent = msg; t.classList.add('show');
-      setTimeout(() => t.classList.remove('show'), 3000);
-    }
 
-    renderJobs();
-  </script>
+<div class="job-card">
+<h3>Data Scientist</h3>
+<p class="company">Microsoft</p>
+
+<div class="tags">
+<span>Hyderabad</span>
+<span>Batch 2025</span>
+</div>
+
+<div class="skills">
+<span>ML</span>
+<span>Python</span>
+<span>SQL</span>
+</div>
+
+<div class="job-footer">
+<h4>₹22 LPA</h4>
+<button>Apply Now</button>
+</div>
+</div>
+
+</section>
+
 </body>
-
 </html>
