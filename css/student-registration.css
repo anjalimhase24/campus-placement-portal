@@ -707,3 +707,30 @@ textarea {
         grid-template-columns: 1fr
     }
 }
+
+@media (max-width: 900px) {
+  nav {
+    padding: 1rem 1.5rem;
+    
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .reg-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-left {
+    display: none;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+        text-align: center;
+
+  }
+}
