@@ -1,0 +1,192 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Bricolage Grotesque',sans-serif;
+background:#F5F0E8;
+color:#1A1208;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+right:0;
+height:64px;
+background:white;
+border-bottom:1px solid #ddd;
+display:flex;
+align-items:center;
+padding:0 30px;
+}
+
+.nav-logo{
+font-weight:700;
+font-size:20px;
+text-decoration:none;
+color:#1A1208;
+margin-right:auto;
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.nav-logo-dot{
+width:8px;
+height:8px;
+border-radius:50%;
+background:#E8650A;
+}
+
+.nav-links a{
+margin:0 10px;
+text-decoration:none;
+color:#3D2E18;
+font-size:14px;
+}
+
+.nav-links a.active{
+color:#E8650A;
+font-weight:600;
+}
+
+/* BUTTONS */
+
+.btn{
+padding:8px 16px;
+border-radius:8px;
+border:none;
+cursor:pointer;
+}
+
+.btn-primary{
+background:#E8650A;
+color:white;
+}
+
+.btn-outline{
+border:1px solid #ccc;
+background:transparent;
+}
+
+/* HERO */
+
+.page-wrap{
+padding-top:64px;
+}
+
+.hero{
+text-align:center;
+padding:100px 20px;
+}
+
+.hero-h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.highlight{
+color:#E8650A;
+}
+
+.hero-sub{
+max-width:500px;
+margin:auto;
+color:#777;
+}
+
+.hero-btns{
+margin-top:20px;
+}
+
+.hero-btns button{
+margin:5px;
+}
+
+.hero-stats{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+.hstat-val{
+font-size:26px;
+font-weight:700;
+}
+
+.hstat-lbl{
+font-size:13px;
+color:#777;
+}
+
+/* FOOTER */
+
+.footer{
+background:#1A1208;
+color:white;
+padding:40px;
+margin-top:60px;
+}
+
+.footer-inner{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.footer-col a{
+display:block;
+color:#ccc;
+text-decoration:none;
+margin:6px 0;
+}
+
+.footer-bottom{
+margin-top:20px;
+display:flex;
+justify-content:space-between;
+font-size:14px;
+}
+/* Container for all toasts */
+#toastBox {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 9999; /* Ensures it stays above the navbar/footer */
+}
+
+#toastBox {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999; /* This forces it to the very front */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    background: #E8650A; /* Bright orange so you can't miss it */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    min-width: 200px;
+    font-weight: bold;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
