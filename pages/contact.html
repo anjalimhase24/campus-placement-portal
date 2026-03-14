@@ -7,29 +7,27 @@
 
 <link rel="stylesheet" href="../css/contact.css"/>
 <script src="../js/contact.js"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-  <span class="nav-logo"><span class="nav-logo-dot"></span>CampusHire</span>
+  <a class="nav-logo" href="#">
+    <span class="nav-logo-dot"></span>CampusHire
+  </a>
   <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Jobs</a>
-    <a href="#">Applications</a>
-    <a href="#">Dashboard</a>
-    <a href="#">About</a>
-    <a class="active" href="#">Contact</a>
+    <a href="../index.html">Home</a>
+    <a href="../pages/job-listing.html">Jobs</a>
+    <a class="active" href="../pages/Application-status.html">Applications</a>
+    <a href="../pages/student-dashboard.html">Dashboard</a>
+    <a href="../pages/about.html">About</a>
+    <a href="../pages/contact.html">Contact</a>
   </div>
   <div class="nav-cta">
-    <button class="btn btn-outline">Login</button>
-    <button class="btn btn-primary">Register Free</button>
+    <button class="btn btn-outline"><a href="../pages/login.html">Login</a></button>
+    <button class="btn btn-primary"><a href="../pages/student-registration.html">Register Free</a></button>
   </div>
 </nav>
-
 <div class="page-wrap">
 
   <!-- HERO BANNER -->
@@ -202,37 +200,39 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand"><span class="nav-logo-dot" style="animation:none"></span>CampusHire</div>
-        <p class="footer-desc">India's leading campus placement platform connecting students to top recruiters.</p>
+ <footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <span class="footer-brand-dot"></span>CampusHire
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Platform</div>
-        <a href="#">Browse Jobs</a>
-        <a href="#">Track Applications</a>
-        <a href="#">Dashboard</a>
-        <a href="#">Register</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Company</div>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Support</div>
-        <a href="#">Help Center</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-      </div>
+      <p class="footer-desc">India's leading campus placement platform connecting students to top recruiters.</p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 CampusHire. All rights reserved.</span>
-      <span>Made with ❤️ for Indian students</span>
+    <div class="footer-col">
+      <div class="footer-col-title">Platform</div>
+      <a href="../pages/job-listing.html">Browse Jobs</a>
+      <a href="../pages/Application-status.html">Applications</a>
+      <a href="../pages/student-dashboard.html">Dashboard</a>
+      <a href="../pages/student-registration.html">Register</a>
     </div>
-  </footer>
-
+    <div class="footer-col">
+      <div class="footer-col-title">Company</div>
+      <a href="../pages/about.html">About Us</a>
+      <a href="../pages/contact.html">Contact</a>
+      <a href="../pages/student-registration.html">register</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Support</div>
+      <a href="https://www.instagram.com/?hl=en">Instagram</a>
+      <a href="https://www.facebook.com/">facebook</a>
+      <a href="https://x.com/">Twitter</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 CampusHire. All rights reserved.</span>
+    <span>Made with ❤️ for Indian students</span>
+  </div>
+</footer>
 </div><!-- /.page-wrap -->
 
 <div class="toast-box" id="toastBox"></div>

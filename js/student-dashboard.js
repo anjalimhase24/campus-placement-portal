@@ -295,3 +295,70 @@ window.addEventListener('load', () => {
         }
     }, 500);
 });
+
+function toggleMenu(){
+  const menu=document.getElementById('mobileMenu');
+  const btn=document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+document.addEventListener('click',function(e){
+  const nav=document.getElementById('navbar');
+  const menu=document.getElementById('mobileMenu');
+  if(!nav.contains(e.target)&&!menu.contains(e.target)){
+    menu.classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+});
+window.addEventListener('scroll',function(){
+  document.getElementById('navbar').style.boxShadow=
+    window.scrollY>10?'0 4px 20px rgba(26,18,8,0.1)':'none';
+});
+// Active link on click
+document.querySelectorAll('.nav-links a,.mobile-menu a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.querySelectorAll('.nav-links a,.mobile-menu a').forEach(function(x){x.classList.remove('active')});
+    document.querySelectorAll('.nav-links a[href="'+this.getAttribute('href')+'"],.mobile-menu a[href="'+this.getAttribute('href')+'"]').forEach(function(x){x.classList.add('active')});
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  });
+});
+
+
+let student = JSON.parse(localStorage.getItem("studentData"));
+
+if(student){
+
+document.getElementById("studentName").innerText = student.name;
+document.getElementById("studentEmail").innerText = student.email;
+document.getElementById("studentCourse").innerText = student.course;
+
+}
+
+window.onload = function(){
+
+  let data = localStorage.getItem("studentData");
+
+  if(data){
+
+    let student = JSON.parse(data);
+
+    let name = student.firstName + " " + student.lastName;
+
+    document.getElementById("greetingName").innerHTML = "Welcome " + student.firstName + " 👋";
+
+    document.getElementById("profileName").innerHTML = name;
+
+    document.getElementById("profileSub").innerHTML = student.branch + " | " + student.college;
+
+    document.getElementById("statCgpa").innerHTML = student.cgpa;
+
+    document.getElementById("acCgpa").innerHTML = student.cgpa;
+
+    document.getElementById("acBranch").innerHTML = student.branch;
+
+    document.getElementById("profileAvatar").innerHTML = student.firstName.charAt(0);
+
+  }
+
+}

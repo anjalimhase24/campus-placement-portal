@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>CampusHire - About</title>
-
-<link rel="stylesheet" href="./../css/about.css">
-<script src="./../js/about.js"></script>
-
+<link rel="stylesheet" href="../css/about.css">
+<script src="../js/about.js"></script>
 </head>
-
 <body>
-
-<!-- NAVBAR -->
-
-<nav class="navbar">
-
-<h2 class="logo">CampusHire</h2>
-
-<div class="nav-links">
-
-<a href="#">Home</a>
-<a href="#">Jobs</a>
-<a href="#">Applications</a>
-<a href="#">Dashboard</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-
-</div>
-
-<div class="nav-btns">
-
-<button class="btn-outline">Login</button>
-<button class="btn-primary">Register</button>
-
-</div>
-
-</nav>
-
+<header>
+  <nav class="navbar" id="navbar">
+    <a class="nav-logo" href="#"><span class="nav-dot"></span>CampusHire</a>
+    <div class="nav-links">
+      <a href="../index.html" class="active">Home</a>
+      <a href="../pages/job-listing.html">Jobs</a>
+      <a href="../pages/Application-status.html">Applications</a>
+      <a href="../pages/student-dashboard.html">Dashboard</a>
+      <a href="../pages/about.html">About</a>
+      <a href="../pages/contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-outline"><a href="../pages/login.html">Login</a></button>
+      <button class="btn btn-primary"><a href="../pages/student-registration.html">Register Free</a></button>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <!-- Mobile Menu -->
+ 
+</header>
 <!-- HERO SECTION -->
 
 <section class="hero">
@@ -154,7 +143,7 @@ Hundreds of companies hiring fresh graduates.
 
 <div class="team-card">
 
-<img src="images/member1.jpg">
+<img src="./../images/anushkaa.png">
 
 <h4>Anushka Kakade</h4>
 
@@ -164,7 +153,7 @@ Hundreds of companies hiring fresh graduates.
 
 <div class="team-card">
 
-<img src="images/member2.jpg">
+<img src="./../images/anjali.png.jpeg">
 
 <h4>Anjali Mhanse</h4>
 
@@ -174,7 +163,7 @@ Hundreds of companies hiring fresh graduates.
 
 <div class="team-card">
 
-<img src="images/member3.jpg">
+<img src="./../images/vaishnavi.png">
 
 <h4>Vaishnavi Pawar</h4>
 
@@ -184,7 +173,7 @@ Hundreds of companies hiring fresh graduates.
 
 <div class="team-card">
 
-<img src="images/member4.jpg">
+<img src="./../images/sakshi.png">
 
 <h4>Sakshi Pulate</h4>
 
@@ -194,7 +183,7 @@ Hundreds of companies hiring fresh graduates.
 
 <div class="team-card">
 
-<img src="images/member5.jpg">
+<img src="./../images/sarla.png.jpeg">
 
 <h4>Sarla Varpe</h4>
 
@@ -204,7 +193,7 @@ Hundreds of companies hiring fresh graduates.
 
 <div class="team-card">
 
-<img src="images/member6.jpg">
+<img src="./../images/rushali.png">
 
 <h4>Vrushali Gade</h4>
 
@@ -214,7 +203,7 @@ Hundreds of companies hiring fresh graduates.
 
 <div class="team-card">
 
-<img src="images/member7.jpg">
+<img src="./../images/shruti.png.jpeg">
 
 <h4>Shruti Porje</h4>
 
@@ -224,7 +213,7 @@ Hundreds of companies hiring fresh graduates.
 
 <div class="team-card">
 
-<img src="images/member8.jpg">
+<img src="./../images/darshna.png.jpeg">
 
 <h4>Darshna Deore</h4>
 
@@ -247,23 +236,46 @@ Hundreds of companies hiring fresh graduates.
 Register now and start your placement journey.
 </p>
 
-<button onclick="showToast()">Register Now</button>
+<div class="job-bottom button">
+  <button onclick="showToast()">Register Now</button>
+</div>
 
 </section>
-
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-<p>© 2025 CampusHire. All rights reserved.</p>
-
-</footer>
-
-
 <div id="toast"></div>
 
-<script src="script.js"></script>
-
+<script src="../js/about.js"></script>
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <span class="footer-brand-dot"></span>CampusHire
+      </div>
+      <p class="footer-desc">India's leading campus placement platform connecting students to top recruiters.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Platform</div>
+      <a href="../pages/job-listing.html">Browse Jobs</a>
+      <a href="../pages/Application-status.html">Applications</a>
+      <a href="../pages/student-dashboard.html">Dashboard</a>
+      <a href="../pages/student-registration.html">Register</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Company</div>
+      <a href="../pages/about.html">About Us</a>
+      <a href="../pages/contact.html">Contact</a>
+      <a href="../pages/student-registration.html">register</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Support</div>
+      <a href="https://www.instagram.com/?hl=en">Instagram</a>
+      <a href="https://www.facebook.com/">facebook</a>
+      <a href="https://x.com/">Twitter</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 CampusHire. All rights reserved.</span>
+    <span>Made with ❤️ for Indian students</span>
+  </div>
+</footer>
 </body>
 </html>

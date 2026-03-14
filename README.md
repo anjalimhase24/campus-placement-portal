@@ -1,143 +1,142 @@
-<div align="center">
+# 🎓 Placement Management System
 
-### 🎓 The Ultimate Campus Recruitment Platform
+## 📌 Project Overview
 
-[![Status](https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge)](#)
-[![Type](https://img.shields.io/badge/Type-Single%20File%20SPA-blue?style=for-the-badge)](#)
-[![Pages](https://img.shields.io/badge/Pages-8-orange?style=for-the-badge)](#)
-[![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](#)
+The **Placement Management System** is a web-based mini project developed using **HTML, CSS, and JavaScript**.
+It helps students manage placement activities and track job opportunities in a simple and organized way.
 
-> **One file. Eight pages. Infinite possibilities for your career.**
-
-</div>
+This system allows students to register, login, view available job listings, and check the status of their job applications.
 
 ---
 
-## 🌟 What is CampusHire?
+## 🚀 Key Features
 
-**CampusHire** is a complete, zero-dependency campus recruitment platform built entirely in a **single HTML file**. Designed for students stepping into the job market, it provides everything from job discovery to application tracking — all without a single server, build tool, or npm install.
-
-Just open the file in a browser and you're live. That's it.
+✔ Student Registration
+✔ Student Login
+✔ Student Dashboard
+✔ Job Listings Page
+✔ Application Status Tracking
+✔ Navigation Between Pages
+✔ Contact Page
+✔ LocalStorage based login session
 
 ---
 
-## 📸 Pages at a Glance
+## 📄 Project Pages
+
+### 1️⃣ Home Page
+
+* Introduction of the placement system
+* Navigation to all pages
+
+### 2️⃣ Student Registration Page
+
+Students can create an account by entering:
+
+* Name
+* Email
+* Password
+
+### 3️⃣ Student Login Page
+
+Registered students can login using their credentials.
+
+### 4️⃣ Student Dashboard
+
+Dashboard shows:
+
+* Welcome message
+* Quick access to jobs
+* Application status
+
+### 5️⃣ Job Listings Page
+
+Displays available job opportunities including:
+
+* Job Title
+* Company Name
+* Salary Package
+
+### 6️⃣ Application Status Page
+
+Students can track job application progress.
+
+Status types:
+
+* Applied
+* Shortlisted
+* Rejected
+* Selected
+
+### 7️⃣ About Page
+
+Information about the placement cell and system purpose.
+
+### 8️⃣ Contact Page
+
+Shows contact details of the placement department.
+
+---
+<img width="1869" height="876" alt="image" src="https://github.com/user-attachments/assets/02e73bab-97ab-453f-8668-2533c3e3bef5" />
+
+<img width="1881" height="891" alt="image" src="https://github.com/user-attachments/assets/e90cac1b-c0b8-4679-971a-f168b55d81f0" />
+
+
+## 🗂 Folder Structure
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                        8 COMPLETE PAGES                         │
-├──────────────┬──────────────────────────────────────────────────┤
-│   Home       │  Hero · Features · How It Works · Testimonials   │
-│   Login      │  Email/Password · Social Login · Validation      │
-│   Register   │  Personal Info · Education · Skills · Resume     │
-│  Dashboard   │  Stats · Applications · Skill Bars · Drives      │
-│   Jobs       │  Listings · Live Search · Save · Apply           │
-│   Status     │  Application Tracker · Status Updates · Tabs     │
-│    About     │  Mission · Team · Platform Stats                 │
-│   Contact    │  Form · Validation · Toast Feedback              │
-└──────────────┴──────────────────────────────────────────────────┘
-
----
-
-## ⚡ Key Features
-
-| Feature | Description |
-|---|---|
-|  **Single File Architecture** | Everything — HTML, CSS, JS — in one `.html` file |
-|  **Zero Dependencies** | No npm, no build step, no framework required |
-|  **SPA Navigation** | Seamless page switching without any reload |
-|  **Live Job Search** | Real-time filtering through job listings |
-|  **Apply & Track** | Apply to jobs and track status end-to-end |
-|  **localStorage Persistence** | Your data stays even after closing the tab |
-|  **Toast Notifications** | Elegant animated feedback on every action |
-| **Smooth Animations** | `fadeUp`, staggered reveals, hover micro-interactions |
-|  **Responsive Layout** | Fully mobile-friendly with CSS Grid & Flexbox |
----
-
-### Typography
-
-```
-  Clash Display        →  Headings · Titles · Numbers · Logos
-  Bricolage Grotesque  →  Body · Labels · Inputs · Descriptions
-```
-
-## 🚀 Getting Started
-
-**No setup. No install. No config.**
-
-```bash
-# Option 1 — Just open it
-double-click campushire-website.html
-
-# Option 2 — VS Code Live Server
-Right click → Open with Live Server
-
-# Option 3 — Python quick server
-python -m http.server 8000
-```
-
----
-
-## 🗂️ Code Structure
-
----
-
-## 💾 Data & Storage
-
-```javascript
-// localStorage keys used by CampusHire
-
-localStorage.campushire_apps = [
-  {
-    id: 1,
-    title: "Software Engineer",
-    co: "Google",
-    status: "Interview",   // Applied → In Review → Interview → Offered / Rejected
-    date: "10 Mar 2025",
-    ctc: "₹28 LPA"
-  },
-  // ...
-]
-```
-
-## 🏢 Sample Job Listings
-
-| # | Role | Company | CTC | Location | Type |
-|---|------|---------|-----|----------|------|
-| 1 | Software Engineer |  Google | ₹28 LPA | Bangalore | Full-Time |
-| 2 | SDE – I | Amazon | ₹24 LPA | Hyderabad | Full-Time |
-| 3 | Frontend Developer |  Flipkart | ₹18 LPA | Bangalore | Full-Time |
-| 4 | Data Analyst |  Deloitte | ₹12 LPA | Mumbai | Full-Time |
-| 5 | Consulting Analyst |  PwC | ₹14 LPA | Mumbai | Full-Time |
-| 6 | Backend Engineer |  Zomato | ₹20 LPA | Gurugram | Full-Time |
-| 7 | Product Intern |  Meesho | ₹45k/mo | Remote | Internship |
-| 8 | Mechanical Engineer |  L&T | ₹8 LPA | Pune | Full-Time |
-
----
-
-## 🤝 Contributing
-
-1. Fork the repo
-2. Make your changes directly in the `.html` file
-3. Test all 8 pages work correctly
-4. Submit a pull request with a clear description
-
----
-
-## 📜 License
-
-```
-MIT License — Free to use, modify, and distribute.
-Built for educational and demo purposes.
+placement-management-system
+│
+├── index.html
+├── register.html
+├── login.html
+├── student-dashboard.html
+├── job-listings.html
+├── application-status.html
+├── about.html
+├── contact.html
+│
+├── css
+│   └── style.css
+│
+├── js
+│   └── script.js
+│
+└── images
 ```
 
 ---
 
-<div align="center">
+## 💻 Technologies Used
 
-**Built with ❤️ for students launching their careers**
+* HTML5
+* CSS3
+* JavaScript
+* LocalStorage
 
-*CampusHire — Where Campus Meets Career*
+---
 
-</div>
+## 🔄 Project Workflow
+
+1. Student registers on the registration page.
+2. Login credentials are verified using JavaScript.
+3. After successful login, the user is redirected to the student dashboard.
+4. Students can view job listings.
+5. Students can track their application status.
+
+---
+
+## 🎯 Objective
+
+The main objective of this project is to **simplify the placement process** and provide students with an easy platform to track job opportunities and application status.
+
+---
+
+## Contributors
+
+<a href="https://github.com/anjalimhase24/campus-placement-portal/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=anjalimhase24/campus-placement-portal" />
+</a>
+
+
 
