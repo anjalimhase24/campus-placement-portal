@@ -65,75 +65,80 @@ body {
 }
 
 /* ══════ NAVBAR ══════ */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 64px;
-    background: rgba(255, 253, 248, 0.96);
-    backdrop-filter: blur(18px);
-    border-bottom: 1.5px solid var(--border);
-    z-index: 300;
-    display: flex;
-    align-items: center;
-    padding: 0 2.5rem;
-    gap: 1.5rem
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:black;
+color:white;
 }
 
-.nav-logo {
-    font-family: 'Clash Display', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--ink);
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    cursor: pointer;
-    margin-right: auto;
-    text-decoration: none
+.logo{
+font-size:22px;
+font-weight:bold;
+color:white;
 }
 
-.nav-logo-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--orange);
-    box-shadow: 0 0 8px var(--orange)
+.dot{
+color:#ff6a00;
+margin-right:6px;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 0.1rem
+/* MENU */
+
+.menu a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-size:15px;
+transition:0.3s;
 }
 
-.nav-links a {
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--ink2);
-    padding: 0.42rem 0.8rem;
-    border-radius: 8px;
-    transition: all 0.2s;
-    cursor: pointer
+.menu a:hover{
+color:#ff6a00;
 }
 
-.nav-links a:hover {
-    background: var(--orange-s);
-    color: var(--orange)
+/* REGISTER BUTTON */
+
+.register{
+background:#ff6a00;
+padding:6px 14px;
+border-radius:6px;
+}
+/* TABLET */
+
+@media (max-width:900px){
+
+.navbar{
+padding:15px 30px;
 }
 
-.nav-links a.active {
-    background: var(--orange-s);
-    color: var(--orange);
-    font-weight: 600
+.menu a{
+margin-left:15px;
+font-size:14px;
 }
 
-.nav-cta {
-    display: flex;
-    gap: 0.5rem;
-    margin-left: 0.8rem
+}
+
+/* MOBILE */
+
+@media (max-width:600px){
+
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.menu{
+margin-top:10px;
+}
+
+.menu a{
+display:block;
+margin:8px 0;
+}
+
 }
 
 /* ══════ BUTTONS ══════ */

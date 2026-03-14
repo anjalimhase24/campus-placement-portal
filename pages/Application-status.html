@@ -8,27 +8,22 @@
 <link rel="stylesheet" href="../css/application-status.css "/>
 </head>
 <body>
-
-<nav class="navbar">
-  <a class="nav-logo" href="#">
-    <span class="nav-logo-dot"></span>CampusHire
-  </a>
-  <div class="nav-links">
-    <a href="../index.html">Home</a>
-    <a href="../pages/job-listing.html">Jobs</a>
-    <a class="active" href="../pages/Application-status.html">Applications</a>
-    <a href="../pages/student-dashboard.html">Dashboard</a>
-    <a href="../pages/about.html">About</a>
-    <a href="../pages/contact.html">Contact</a>
-  </div>
-  <div class="nav-cta">
-    <button class="btn btn-outline"><a href="../pages/login.html">Login</a></button>
-    <button class="btn btn-primary"><a href="../pages/student-registration.html">Register Free</a></button>
-  </div>
+<header class="navbar">
+<div class="logo">
+<span class="dot">•</span> CampusHire
+</div>
+<nav class="menu">
+<a href="../index.html">Home</a>
+<a href="../pages/job-listing.html">Jobs</a>
+<a href="../pages/Application-status.html">Applications</a>
+<a href="../pages/student-dashboard.html">Dashboard</a>
+<a href="../pages/about.html">About</a>
+<a href="../pages/contact.html">Contact</a>
+<a href="../pages/login.html">Login</a>
+<a href="../pages/student-registration.html" class="register">Register</a>
 </nav>
-
+</header>
 <div class="page-wrap">
-
   <!-- ══════ HERO BANNER ══════ -->
   <div class="status-hero">
     <div class="status-hero-inner">
@@ -40,10 +35,8 @@
       <button class="btn btn-primary btn-lg" onclick="openAddModal()">+ Add Application</button>
     </div>
   </div>
-
   <!-- ══════ MAIN CONTENT ══════ -->
   <div class="status-wrap">
-
     <!-- Pipeline Funnel -->
     <div class="pipeline-row">
       <div class="pipe-stage">
@@ -67,7 +60,6 @@
         <div class="pipe-lbl">Rejected</div>
       </div>
     </div>
-
     <!-- Stat Cards -->
     <div class="stat5-row">
       <div class="s5" style="animation-delay:0s">
@@ -91,7 +83,6 @@
         <div class="s5-lbl">Rejected</div>
       </div>
     </div>
-
     <!-- Toolbar: Search + Tabs -->
     <div class="toolbar">
       <div class="status-tabs">
@@ -107,14 +98,10 @@
         <input type="text" placeholder="Search company or role..." id="appSearch" oninput="renderStatusApps()"/>
       </div>
     </div>
-
     <!-- Applications List -->
     <div id="statusAppsList"></div>
-
   </div><!-- /.status-wrap -->
-
 </div><!-- /.page-wrap -->
-
 <!-- ══════ ADD APPLICATION MODAL ══════ -->
 <div class="modal-overlay hidden" id="modalOverlay" onclick="if(event.target===this)closeAddModal()">
   <div class="modal">
@@ -159,7 +146,6 @@
     </div>
   </div>
 </div>
-
 <!-- TOAST BOX -->
 <div class="toast-box" id="toastBox"></div>
 <script src="../js/application-status.js "></script>

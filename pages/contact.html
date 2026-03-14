@@ -10,41 +10,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-
-<nav class="navbar">
-  <a class="nav-logo" href="#">
-    <span class="nav-logo-dot"></span>CampusHire
-  </a>
-  <div class="nav-links">
-    <a href="../index.html">Home</a>
-    <a href="../pages/job-listing.html">Jobs</a>
-    <a class="active" href="../pages/Application-status.html">Applications</a>
-    <a href="../pages/student-dashboard.html">Dashboard</a>
-    <a href="../pages/about.html">About</a>
-    <a href="../pages/contact.html">Contact</a>
-  </div>
-  <div class="nav-cta">
-    <button class="btn btn-outline"><a href="../pages/login.html">Login</a></button>
-    <button class="btn btn-primary"><a href="../pages/student-registration.html">Register Free</a></button>
-  </div>
+<header class="navbar">
+<div class="logo">
+<span class="dot">•</span> CampusHire
+</div>
+<nav class="menu">
+<a href="../index.html">Home</a>
+<a href="../pages/job-listing.html">Jobs</a>
+<a href="../pages/Application-status.html">Applications</a>
+<a href="../pages/student-dashboard.html">Dashboard</a>
+<a href="../pages/about.html">About</a>
+<a href="../pages/contact.html">Contact</a>
+<a href="../pages/login.html">Login</a>
+<a href="../pages/student-registration.html" class="register">Register</a>
 </nav>
+</header>
 <div class="page-wrap">
-
-  <!-- HERO BANNER -->
   <div class="contact-hero-banner">
     <div class="section-tag">Get in Touch</div>
     <h1>We'd Love to Hear From You</h1>
     <p>Students, recruiters, or colleges — reach out anytime</p>
   </div>
-
   <!-- CONTACT LAYOUT (original 2-col) -->
   <div class="contact-layout">
-
     <!-- LEFT: Info + FAQ -->
     <div>
       <h2 style="font-family:'Clash Display',sans-serif;font-weight:700;font-size:1.7rem;letter-spacing:-0.03em;margin-bottom:0.7rem;color:var(--ink)">Let's Talk</h2>
       <p style="font-size:0.88rem;color:var(--muted);line-height:1.8;margin-bottom:1.8rem">Have a question or partnership idea? Our team typically responds within 24 hours.</p>
-
       <!-- Contact Info Items -->
       <div class="ci-item">
         <div class="ci-icon" style="background:var(--orange-s)">📧</div>
@@ -78,7 +70,6 @@
           <div class="ci-sub">For urgent student queries</div>
         </div>
       </div>
-
       <!-- FAQ -->
       <h3 style="font-family:'Clash Display',sans-serif;font-weight:600;font-size:1.05rem;margin:2rem 0 1rem;color:var(--ink)">Frequently Asked</h3>
       <div class="faq-item" onclick="this.classList.toggle('open')">
@@ -98,7 +89,6 @@
         <div class="faq-a">Companies sign up as recruiters and post directly. All listings are verified before going live.</div>
       </div>
     </div>
-
     <!-- RIGHT: Contact Form Card -->
     <div class="contact-card">
       <!-- Form view -->
@@ -150,7 +140,6 @@
         <div id="cErr" class="err-msg"></div>
         <button class="submit-btn" onclick="sendMessage()">📨 Send Message</button>
       </div>
-
       <!-- Success view -->
       <div class="success-screen" id="successView">
         <div class="success-icon">✅</div>
@@ -159,9 +148,7 @@
         <button class="btn btn-primary btn-lg" onclick="resetForm()">Send Another →</button>
       </div>
     </div>
-
   </div><!-- /.contact-layout -->
-
   <!-- MAP SECTION -->
   <div class="map-section">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:0.7rem">
@@ -198,7 +185,6 @@
       </div>
     </div>
   </div>
-
   <!-- FOOTER -->
  <footer class="footer">
   <div class="footer-inner">
@@ -234,9 +220,6 @@
   </div>
 </footer>
 </div><!-- /.page-wrap -->
-
 <div class="toast-box" id="toastBox"></div>
-
-
 </body>
 </html>
