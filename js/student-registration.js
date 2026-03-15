@@ -95,9 +95,6 @@ function nextStep(from) {
     document.getElementById('successBox').classList.add('show');
     showToast(' Registration successful! Welcome to CampusHire.');
   }
-
-
-
   
 function toggleMenu(){
   const menu=document.getElementById('mobileMenu');

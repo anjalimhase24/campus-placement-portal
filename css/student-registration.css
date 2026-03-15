@@ -1,8 +1,4 @@
-/* ══════════════════════════════════════════
-   CAMPUSHIRE — APPLICATION STATUS PAGE
-   Theme: Orange · Black · Cream
-   ══════════════════════════════════════════ */
-*,
+
 *::before,
 *::after {
     box-sizing: border-box;
@@ -213,24 +209,14 @@ margin:8px 0;
   --border: #e0ddd5;
   --success: #1a7a3c;
 }
-/* ─── GLOBAL STYLES ─── */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-html {
-  scroll-behavior: smooth;
-}
 
+/* 
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--paper);
   color: var(--ink);
-}
+} */
 
 /* ─── PAGE LAYOUT ─── */
 .page {
@@ -245,6 +231,7 @@ body {
   /* display: grid; */
   grid-template-columns: 1fr 1.7fr;
   min-height: calc(100vh - 72px);
+ position:static;
 
 }
 
@@ -586,7 +573,6 @@ textarea {
   margin-bottom: 1.8rem;
 }
 
-
 /* BUTTON STYLES */
 .btn-primary {
   background: var(--accent);
@@ -604,23 +590,6 @@ textarea {
   transform: translateY(-2px);
   opacity: 0.9;
 }
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
- 
-  .nav-links {
-    display: none;
-  }
-
-  .reg-wrap {
-    grid-template-columns: 1fr;
-  }
-
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 * FOOTER CSS */:root {
     --ink: #1A1208;
@@ -702,41 +671,52 @@ textarea {
     gap: 0.4rem
 }
 
-@media(max-width:700px) {
-    .footer-inner {
-        grid-template-columns: 1fr 1fr
-    }
-}
-
-@media(max-width:450px) {
-    .footer-inner {
-        grid-template-columns: 1fr
-    }
-}
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  nav {
-    padding: 1rem 1.5rem;
-    
-  }
-  .nav-links {
-    display: none;
-  }
+
 
   .reg-wrap {
     grid-template-columns: 1fr;
   }
 
-  .reg-left {
-    display: none;
-  }
-
   .form-grid {
     grid-template-columns: 1fr;
   }
-
-  footer {
-        text-align: center;
-
-  }
 }
+
+@media (max-width:480px){
+
+.logo{
+  font-size:18px;
+}
+
+.navbar{
+  padding:10px 15px;
+
+}
+
+.panel{
+  padding:15px;
+}
+
+.form-group label{
+  font-size:13px;
+}
+
+input,
+select{
+  font-size:13px;
+  padding:10px;
+}
+
+button{
+  font-size:14px;
+  padding:10px;
+}
+
+.progress{
+  height:6px;
+}
+
+}
+
